@@ -1,0 +1,22 @@
+function valida_cpf_cnpj(){
+	
+	d = document.cliente;
+	
+	if(d.pessoa.value == "F"){
+		if(!isCpf(d.cpfcnpj.value)){
+			alert('CPF informado inválido!')
+			d.cpfcnpj.focus();
+		}
+		
+	}else if(d.pessoa.value == "J"){
+		if(!isCnpj(d.cpfcnpj.value));{
+			alert('CNPJ informado inválido!')
+			d.cpfcnpj.focus();
+		}
+	}else{
+			alert('Selecione tipo de cliente Pessoa Juridica ou Fisica!')
+			d.pessoa.focus();		
+	}
+	
+	
+}
